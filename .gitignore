@@ -1,0 +1,28 @@
+# ── Environment & Secrets ──────────────────
+.env
+.env.local
+.env.production
+*.env
+
+# ── Python ─────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# ── VS Code ────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ── Logs ───────────────────────────────────
+*.log
+logs/
+
+# ── OS Files ───────────────────────────────
+.DS_Store
+Thumbs.db
