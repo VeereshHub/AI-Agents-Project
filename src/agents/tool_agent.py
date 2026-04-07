@@ -1,15 +1,15 @@
-from src.tools.calculator_tool import calculator
-from src.tools.file_reader_tool import read_file
+from src.agents.tool_selector_agent import tool_selector_agent
+from src.tools.tool_registry import tools
 
 
 def tool_agent(query):
 
-    if "calculate" in query.lower():
-        expression = query.lower().replace("calculate", "")
-        return calculator(expression)
+    tool_name = tool_selector_agent(query)
 
-    if "read file" in query.lower():
-        file_name = query.lower().replace("read file", "").strip()
-        return read_file(file_name)
+    if tool_name in tools:
+
+        tool_function = tools[tool_name]["function"]
+
+        return tool_function(query)
 
     return None
