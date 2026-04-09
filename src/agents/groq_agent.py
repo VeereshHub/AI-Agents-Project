@@ -14,7 +14,10 @@ def groq_agent(query):
     add_memory("user", query)
 
     messages = [
-        {"role": "system", "content": "You are a helpful AI assistant"}
+        {
+         "role": "system",
+         "content": "You are a helpful AI assistant"
+        }
     ] + get_memory()
 
     response = client.chat.completions.create(

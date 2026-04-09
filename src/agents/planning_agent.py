@@ -16,6 +16,7 @@ def planning_agent(query):
     Step 3:
     """
 
-    plan = groq_agent(planning_prompt)
+    # plan = groq_agent(planning_prompt)
+    plan=groq_agent(query, memory=False)
 
     return plan
