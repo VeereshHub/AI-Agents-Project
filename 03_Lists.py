@@ -3,6 +3,8 @@ skills=['Python', 'Java', 'AI', 'SQL', 'RPA', 'Xceptor']
 
 skills_to_add=['ML','Data Science','Deep Learning']
 
+counter=1
+
 for skill in skills_to_add:
     skills.append(skill)
 
@@ -18,8 +20,12 @@ for skill in skills_to_remove:
 
 print(f"Skills Not in List: ")
 for index, skill in enumerate(skills_Not_in_list, start=1):
-    print(f"{index} - {skill}")
+    print(f"{index} - {skill.capitalize()}")
 
 print(f"My Skills are:")
-for enum , skill in enumerate(skills, start=1):
-	print(f"{enum} - {skill}")
+for index , skill in enumerate(skills, start=1):
+    # if counter==5:
+    #     break
+	
+    print(f"{index} - {skill.capitalize()}")
+    counter+=1
